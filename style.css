@@ -1,0 +1,53 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: var(--fontSizeMobile);
+}
+
+body {
+  min-height: 100vh;
+}
+
+header {
+  width: 100%;
+}
+
+img {
+  max-width: 100%;
+}
+
+:root {
+  --gradient: hsl(249, 99%, 64%) to hsl(278, 94%, 30%);
+  --error: hsl(0, 100%, 66%);
+  --lightViolet: hsl(270, 3%, 87%);
+  --darkViolet: hsl(279, 6%, 55%);
+  --veryDarkViolet: hsl(278, 68%, 11%);
+  --fontSizeMobile: 1rem;
+  --fontSizeDesktop: 1.125rem;
+}
+
+.header {
+  background-image: url(images/bg-main-mobile.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 400px;
+}
+
+.wrapper {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.completed__form {
+  display: none;
+}
