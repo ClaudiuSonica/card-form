@@ -10,7 +10,7 @@ html {
 }
 
 body {
-  min-height: 100vh;
+  height: 100vh;
 }
 
 header {
@@ -22,32 +22,198 @@ img {
 }
 
 :root {
-  --gradient: hsl(249, 99%, 64%) to hsl(278, 94%, 30%);
+  --gradient: linear-gradient(hsl(249, 99%, 64%), hsl(249, 99%, 64%));
   --error: hsl(0, 100%, 66%);
   --lightViolet: hsl(270, 3%, 87%);
   --darkViolet: hsl(279, 6%, 55%);
   --veryDarkViolet: hsl(278, 68%, 11%);
   --fontSizeMobile: 1rem;
   --fontSizeDesktop: 1.125rem;
+  --fontSizeCard: 0.7rem;
 }
 
-.header {
+.left__section {
   background-image: url(images/bg-main-mobile.png);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: center center;
+  height: 210px;
 }
 
-.container {
+.cards {
+  width: 70%;
+  margin: 0 auto;
+  position: relative;
+  top: 1.2em;
+}
+
+.back__card {
+  position: relative;
+  left: 2em;
+}
+
+#cvv__card {
+  font-size: var(--fontSizeCard);
+  position: absolute;
+  top: 43%;
+  right: 10%;
+  color: white;
+}
+
+.front__card {
+  position: relative;
+  top: -4.2em;
+  right: 2em;
+}
+
+.card__container {
+  position: absolute;
+  top: 20%;
+  left: 3%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card__info {
+  color: white;
+}
+
+#date {
+  font-size: var(--fontSizeCard);
+  position: relative;
+  top: 3em;
+  left: 9em;
+}
+
+#number {
   width: 100%;
-  max-width: 400px;
+  letter-spacing: 2px;
+  font-size: var(--fontSizeCard);
+  position: relative;
+  top: 2em;
+  left: 1em;
+}
+
+#name {
+  text-transform: uppercase;
+  font-size: var(--fontSizeCard);
+  position: relative;
+  top: 3em;
+  left: 1em;
+}
+
+.card__logo {
+  height: 30px;
+  position: relative;
+  top: -1em;
+  right: 2.9em;
 }
 
 .wrapper {
-  width: 80%;
+  width: 85%;
   margin: 0 auto;
 }
 
+.input {
+  height: 40px;
+  border: 1px solid var(--lightViolet);
+  border-radius: 10px;
+  padding: 0 1em;
+  font-size: .9em;
+  margin-bottom: 1em;
+  cursor: pointer;
+}
+
+.input:active {
+  border: 1px solid var(--gradient);
+}
+
+.form {
+  margin-top: 5em;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+.field__label {
+  text-transform: uppercase;
+  margin-bottom: .3em;
+  letter-spacing: 1.5px;
+  color: var(--veryDarkViolet);
+}
+
+
+.two__fields {
+  display: flex;
+  flex-direction: row;
+}
+
+.field__date {
+  width: 55%;
+}
+
+.field__cvv {
+  width: 45%;
+}
+
+.small__input {
+  margin-top: .3em;
+  width: 45%;
+}
+
+.bigger__input {
+  margin-top: .3em;
+  width: 100%;
+}
+
+.btn {
+  background-color: var(--veryDarkViolet);
+  color: white;
+  font-size: var(--fontSizeDesktop);
+  width: 100%;
+  font-weight: bold;
+  padding: .7em;
+  border: transparent;
+  border-radius: 5px;
+  margin-top: 1em;
+}
+
+
 .completed__form {
+  text-align: center;
+}
+
+.img__ok {
+  margin: 5em 0 1.5em 0;
+}
+
+.title {
+  margin-bottom: .7em;
+}
+
+.continue {
+  margin-top: 2em;
+  background-color: var(--veryDarkViolet);
+  color: white;
+  font-size: var(--fontSizeDesktop);
+  width: 100%;
+  font-weight: bold;
+  padding: .7em;
+  border: transparent;
+  border-radius: 5px;
+  margin-top: 1em;
+}
+
+.invisible {
   display: none;
 }
+
+.visible {
+  display: block;
+}
+
+

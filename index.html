@@ -12,16 +12,19 @@
 </head>
 <body>
   <main>
-    <div class="container">
-      <div class="header">
-        <div class="left__section wrapper">
+    <div id="toggle" class="container">
+        <div class="left__section">
           <div class="cards">
+            <div class="back__card">
+              <img src="images/bg-card-back.png" alt="back card">
+              <span id="cvv__card">000</span>
+            </div>
             <div class="front__card">
               <img src="images/bg-card-front.png" alt="front card">
               <div class="card__container">
-                <img src="images/card-logo.svg" alt="card logo">
-                <h3 id="number">0000 0000 0000 0000</h3>
+                <img class="card__logo" src="images/card-logo.svg" alt="card logo">
                 <div class="card__info">
+                  <h3 id="number">0000 0000 0000 0000</h3>
                   <span id="name">Jane Appleseed</span>
                   <span id="date">
                     <span id="month__card">00</span>
@@ -31,13 +34,8 @@
                 </div>
               </div>
             </div>
-            <div class="back__card">
-              <img src="images/bg-card-back.png" alt="back card">
-              <span id="cvv__card">000</span>
-            </div>
           </div>
         </div>
-      </div>
       <div class="wrapper">
         <form id="form" class="form" autocomplete="off" novalidate>
           <div class="field">
@@ -65,35 +63,40 @@
             <small class="error__message"></small>
           </div>
           <div class="field two__fields">
-            <label class="field__label">Exp. Date(mm/yy)</label>
-            <input type="number"
-            id="month"
-            name="month"
-            class="input"
-            placeholder="MM"
-            min="1"
-            max="12"
-            required
-            />
-            <small class="error__message"></small>
-            <input type="number"
-            id="year"
-            name="year"
-            class="input"
-            placeholder="YY"
-            min="2022"
-            required
-            />
-            <small class="error__message"></small>
-            <input type="number"
-            id="cvv"
-            name="cvv"
-            class="input"
-            placeholder="e.g 123"
-            min="123"
-            max="123"
-            required
-            />
+            <div class="field__date">
+              <label class="field__label">Exp. Date(mm/yy)</label>
+              <input type="number"
+              id="month"
+              name="month"
+              class="input small__input"
+              placeholder="MM"
+              min="1"
+              max="12"
+              required
+              />
+              <small class="error__message"></small>
+              <input type="number"
+              id="year"
+              name="year"
+              class="input small__input"
+              placeholder="YY"
+              min="2022"
+              required
+              />
+              <small class="error__message"></small>
+            </div>
+            <div class="field__cvv">
+              <label class="field__label">CVV</label>
+              <input type="number"
+              id="cvv"
+              name="cvv"
+              class="input bigger__input"
+              placeholder="e.g 123"
+              min="123"
+              max="123"
+              required
+              />
+            </div>
           </div>
           <button id="btn" class="btn">Confirm</button>
         </form>
@@ -103,11 +106,13 @@
 
   <!-- Completed state start -->
 
-  <div class="completed__form">
-    <img src="images/icon-complete.svg" alt="" class="img__ok">
-    <h3 class="title">Thank you!</h3>
-    <p class="message">We've added your card details</p>
-    <button class="continue" id="continue">Continue</button>
+  <div class="wrapper invisible">
+    <div class="completed__form">
+      <img src="images/icon-complete.svg" alt="" class="img__ok">
+      <h3 class="title">Thank you!</h3>
+      <p class="message">We've added your card details</p>
+      <button class="continue" id="continue">Continue</button>
+    </div>
   </div>
   <script src="main.js"></script>
 </body>
