@@ -12,21 +12,21 @@
 </head>
 <body>
   <main>
-    <div id="toggle" class="container">
+    <div class="container d-flex">
         <div class="left__section">
           <div class="cards">
             <div class="back__card">
               <img src="images/bg-card-back.png" alt="back card">
-              <span id="cvv__card">000</span>
+              <span class="cvv__card" id="cvv__card">000</span>
             </div>
             <div class="front__card">
               <img src="images/bg-card-front.png" alt="front card">
               <div class="card__container">
                 <img class="card__logo" src="images/card-logo.svg" alt="card logo">
                 <div class="card__info">
-                  <h3 id="number">0000 0000 0000 0000</h3>
-                  <span id="name">Jane Appleseed</span>
-                  <span id="date">
+                  <h3 class="number" id="number">0000 0000 0000 0000</h3>
+                  <span class="name" id="name">Jane Appleseed</span>
+                  <span class="date" id="date">
                     <span id="month__card">00</span>
                     /
                     <span id="year__card">00</span>
@@ -36,7 +36,7 @@
             </div>
           </div>
         </div>
-      <div class="wrapper">
+      <div id="after__complete" class="wrapper right__section">
         <form id="form" class="form" autocomplete="off" novalidate>
           <div class="field">
             <label class="field__label">Cardholder Name</label>
@@ -101,19 +101,16 @@
           <button id="btn" class="btn">Confirm</button>
         </form>
       </div>
+      <div id="before__complete" class="wrapper before__complete invisible">
+        <div class="completed__form">
+          <img src="images/icon-complete.svg" alt="" class="img__ok">
+          <h3 class="title">Thank you!</h3>
+          <p class="message">We've added your card details</p>
+          <button class="continue" id="continue">Continue</button>
+        </div>
+      </div>
     </div>
   </main>
-
-  <!-- Completed state start -->
-
-  <div class="wrapper invisible">
-    <div class="completed__form">
-      <img src="images/icon-complete.svg" alt="" class="img__ok">
-      <h3 class="title">Thank you!</h3>
-      <p class="message">We've added your card details</p>
-      <button class="continue" id="continue">Continue</button>
-    </div>
-  </div>
   <script src="main.js"></script>
 </body>
 </html>

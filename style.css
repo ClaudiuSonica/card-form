@@ -13,10 +13,6 @@ body {
   height: 100vh;
 }
 
-header {
-  width: 100%;
-}
-
 img {
   max-width: 100%;
 }
@@ -52,14 +48,6 @@ img {
   left: 2em;
 }
 
-#cvv__card {
-  font-size: var(--fontSizeCard);
-  position: absolute;
-  top: 43%;
-  right: 10%;
-  color: white;
-}
-
 .front__card {
   position: relative;
   top: -4.2em;
@@ -77,17 +65,25 @@ img {
 }
 
 .card__info {
-  color: white;
+  color: var(--lightViolet);
 }
 
-#date {
+.cvv__card {
+  font-size: var(--fontSizeCard);
+  position: absolute;
+  top: 43%;
+  right: 10%;
+  color: var(--lightViolet);
+}
+
+.date {
   font-size: var(--fontSizeCard);
   position: relative;
   top: 3em;
   left: 9em;
 }
 
-#number {
+.number {
   width: 100%;
   letter-spacing: 2px;
   font-size: var(--fontSizeCard);
@@ -96,7 +92,7 @@ img {
   left: 1em;
 }
 
-#name {
+.name {
   text-transform: uppercase;
   font-size: var(--fontSizeCard);
   position: relative;
@@ -216,4 +212,90 @@ img {
   display: block;
 }
 
+@media (min-width: 1000px){
+  html {
+    font-size: var(--fontSizeDesktop);
+  }
 
+  .d-flex{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .left__section {
+    width: 30%;
+    height: 100vh;
+    position: relative;
+  }
+
+  .right__section {
+    width: 30%;
+    display: grid;
+    place-items: center;
+  }
+
+  .cards {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translate(-50%, -50%);
+  }
+
+  .front__card {
+    position: relative;
+    top: -12em;
+    right: 6em;
+  }
+
+  .card__logo {
+    height: 50px;
+    position: relative;
+    top: -2em;
+    right: 4em;
+  }
+
+  .back__card {
+    position: relative;
+    top: 16em;
+    left: -1em;
+  }
+
+  .cvv__card {
+    font-size: var(--fontSizeDesktop);
+  }
+
+  .name {
+    font-size: var(--fontSizeDesktop);
+    position: relative;
+    top: 3em;
+  }
+
+  .date {
+    font-size: var(--fontSizeDesktop);
+    position: relative;
+    top: 3em;
+    left: 8em;
+  }
+
+  .number {
+    font-size: var(--fontSizeDesktop);
+    position: relative;
+    top: 2em;
+  }
+  
+  .before__complete {
+    width: 50%;
+    display: grid;
+    place-items: center;
+  }
+  
+  .visible {
+    display: block;
+  }
+
+  .invisible {
+    display: none;
+  }
+
+}
