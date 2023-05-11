@@ -27,23 +27,21 @@ img {
   --fontSizeCard: 0.7rem;
 }
 
+.error__input {
+  border: 2px solid var(--error);
+}
+
 .error__message {
   color: var(--error);
-  font-size: 1.125rem;
+  font-size: .7rem;
+  margin: .5em 0;
 }
 
-.error__message:empty {
-  display: none;
+.error__message::after {
+  content: "Can't be blank";
 }
 
-.field:has(small:not(:empty)) label{
-  color: var(--error);
-}
-
-.field:has(small:not(:empty)) input{
-  border-color: var(--error);
-}
-
+                                                                    
 .left__section {
   background-image: url(images/bg-main-mobile.png);
   background-repeat: no-repeat;
@@ -88,7 +86,7 @@ img {
   font-size: var(--fontSizeCard);
   position: absolute;
   top: 43%;
-  right: 10%;
+  right: 16%;
   color: var(--lightViolet);
 }
 
@@ -134,7 +132,6 @@ img {
   border-radius: 10px;
   padding: 0 1em;
   font-size: .9em;
-  margin-bottom: 1em;
 }
 
 .input:hover,
@@ -167,6 +164,7 @@ img {
 .field__label {
   text-transform: uppercase;
   margin-bottom: .3em;
+  margin-top: 1em;
   letter-spacing: 1.5px;
   color: var(--veryDarkViolet);
 }
@@ -178,11 +176,11 @@ img {
 }
 
 .field__date {
-  width: 55%;
+  width: 60%;
 }
 
 .field__cvv {
-  width: 45%;
+  width: 40%;
 }
 
 .small__input {
@@ -205,6 +203,11 @@ img {
   border: transparent;
   border-radius: 5px;
   margin-top: 1em;
+}
+
+.btn:hover,
+.btn:focus {
+  cursor: pointer;
 }
 
 
@@ -233,12 +236,13 @@ img {
   margin-top: 1em;
 }
 
-.invisible {
-  display: none;
+.continue:hover,
+.continue:focus {
+  cursor: pointer;
 }
 
-.visible {
-  display: block;
+.invisible {
+  display: none;
 }
 
 @media (min-width: 1000px){

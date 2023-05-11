@@ -17,19 +17,19 @@
           <div class="cards">
             <div class="back__card">
               <img src="images/bg-card-back.png" alt="back card">
-              <span class="cvv__card" id="cvv__card">000</span>
+              <span class="cvv__card" id="card__cvv">000</span>
             </div>
             <div class="front__card">
               <img src="images/bg-card-front.png" alt="front card">
               <div class="card__container">
                 <img class="card__logo" src="images/card-logo.svg" alt="card logo">
                 <div class="card__info">
-                  <h3 class="number" id="number">0000 0000 0000 0000</h3>
-                  <span class="name" id="name">Jane Appleseed</span>
+                  <h3 class="number" id="card__number">1234 5678 9123 0000</h3>
+                  <span class="name" id="card__name">Jane Appleseed</span>
                   <span class="date" id="date">
-                    <span id="month__card">00</span>
+                    <span id="card__month">00</span>
                     /
-                    <span id="year__card">00</span>
+                    <span id="card__year">00</span>
                   </span>
                 </div>
               </div>
@@ -40,32 +40,37 @@
         <form id="form" class="form" autocomplete="off" novalidate>
           <div class="field">
             <label class="field__label">Cardholder Name</label>
-            <input type="text"
-            id="cardholder__name"
+            <input 
+            type="text"
+            id="name"
             name="cardholder__name"
             placeholder="e.g Jane Appleseed"
             class="input"
             required
             />
-            <small class="error__message"></small>
           </div>
           <div class="field">
             <label class="field__label">Card Number</label>
-            <input type="text"
-            id="card__number"
+            <input 
+            type="number"
+            oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)"
+            minlength="16"
+            maxlength="16"
+            id="number"
             name="card__number"
-            placeholder="e.g 0000 0000 0000 0000"
+            placeholder="e.g 1234 5678 9123 0000"
             class="input"
-            min="16"
-            max="16"
             required
             />
-            <small class="error__message"></small>
           </div>
           <div class="field two__fields">
             <div class="field__date">
               <label class="field__label">Exp. Date(mm/yy)</label>
-              <input type="number"
+              <input 
+              type="number"
+              oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)"
+              minlength="2"
+              maxlength="2"
               id="month"
               name="month"
               class="input small__input"
@@ -74,44 +79,48 @@
               max="12"
               required
               />
-              <small class="error__message"></small>
-              <input type="number"
+              <input 
+              type="number"
+              oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)"
+              minlength="2"
+              maxlength="2"
               id="year"
               name="year"
               class="input small__input"
               placeholder="YY"
-              min="2022"
+              min="22"
               required
               />
-              <small class="error__message"></small>
             </div>
             <div class="field__cvv">
               <label class="field__label">CVV</label>
-              <input type="number"
+              <input 
+              type="number"
+              oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)"
+              minlength="3"
+              maxlength="3"
               id="cvv"
               name="cvv"
               class="input bigger__input"
               placeholder="e.g 123"
-              min="123"
-              max="123"
               required
               />
-              <small class="error__message"></small>
             </div>
           </div>
-          <button id="btn" class="btn">Confirm</button>
+          <button id="btn" class="btn" type="submit">Confirm</button>
         </form>
       </div>
-      <div id="before__complete" class="wrapper before__complete invisible">
+      <div id="completed" class="wrapper before__complete invisible">
         <div class="completed__form">
           <img src="images/icon-complete.svg" alt="" class="img__ok">
           <h3 class="title">Thank you!</h3>
           <p class="message">We've added your card details</p>
-          <button class="continue" id="continue">Continue</button>
+          <button class="continue" id="continue" type="reset">Continue</button>
         </div>
       </div>
     </div>
   </main>
   <script src="main.js"></script>
+  <script src="buttons.js"></script>
 </body>
 </html>
